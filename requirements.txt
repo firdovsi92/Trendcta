@@ -14,3 +14,4 @@ multiprocessing_on_dill
 bravado
 pytest
 arch
+MetaTrader5

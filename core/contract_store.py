@@ -4,7 +4,7 @@ from enum import Enum
 
 # This list is kept separately from the global config.settings.data_sources, because data may
 # still be written for a data provider, while it is disabled and not used
-providers_list = ['ib', 'quandl']
+providers_list = ['ib', 'quandl', 'mt5']
 
 
 # Types of data that can be stored. Each type corresponds to a MySQL table or
@@ -26,6 +26,9 @@ columns_mapping = {
     ('ib', 'futures'): {},
     ('ib', 'others'): {},
     ('ib', 'currency'): {'close': 'rate'},
+    ('mt5', 'futures'): {},
+    ('mt5', 'others'): {},
+    ('mt5', 'currency'): {'close': 'rate'},
 }
 
 

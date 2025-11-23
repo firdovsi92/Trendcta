@@ -1,5 +1,6 @@
 from core import data_feed
 import config.spots
+import config.settings
 
 
 class Spot(object):
@@ -16,11 +17,17 @@ class Spot(object):
         self.name = name
         self.ib_symbol = None
         self.quandl_symbol = None
-        self.price_data = ['ib', 'quandl']
+        self.mt5_symbol = None
+        self.mt5_storage = 'MT5'
+        self.mt5_timeframe = 'D1'
+        self.price_data = ['ib', 'quandl', 'mt5']
         self.multiplier = 1.0
         kwargs = config.spots.spots_all[name]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+        if 'mt5' not in self.price_data and 'mt5' in config.settings.data_sources:
+            self.price_data = list(self.price_data) + ['mt5']
 
     def __repr__(self):
         return self.name + ' (spot)'

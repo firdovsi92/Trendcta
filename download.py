@@ -16,7 +16,7 @@ from core.utility import ConnectionException
 
 """
 Script usage: python download.py <data_provider_name> [--recent] [--concurrent]
-<data_provider_name> should be either 'ib' (for Interactive Brokers) or 'quandl'
+<data_provider_name> should be one of 'ib' (Interactive Brokers), 'quandl' or 'mt5'
 --recent flag: if provided, will only download historical contracts for the last year
                 (only applies to quandl)
 --concurrent flag: if provided, will download data in multiple CPU threads (only applies to quandl,
@@ -99,8 +99,8 @@ def download_all(prov_name, qtype, recent, concurrent):
 
 if __name__ == "__main__":
     try:
-        if len(sys.argv) < 2 or sys.argv[1] not in ['quandl', 'ib']:
-            print('Usage: download.py [quandl|ib] [--recent] [--concurrent]')
+        if len(sys.argv) < 2 or sys.argv[1] not in ['quandl', 'ib', 'mt5']:
+            print('Usage: download.py [quandl|ib|mt5] [--recent] [--concurrent]')
             sys.exit(1)
         provider = sys.argv[1]
         recent = '--recent' in sys.argv

@@ -65,7 +65,13 @@ class Instrument(object):
         self.broker = 'ib'                          # Default broker
         self.bootstrapped_weights = None            # Only used to store results of bootstrapping. Not used for trading.
         self.first_contract = None
-        self.contract_data = ['ib', 'quandl']
+        self.contract_data = ['ib', 'quandl', 'mt5']
+        # MetaTrader 5 specific defaults
+        self.mt5_symbol = None
+        self.mt5_store_symbol = None
+        self.mt5_storage = 'MT5'
+        self.mt5_timeframe = 'D1'
+        self.mt5_contracts = None                   # optional mapping {contract_label: mt5_symbol}
 
         # assign properties from instrument definition
         for key, value in kwargs.items():
@@ -74,6 +80,10 @@ class Instrument(object):
 
         self.weights = pd.DataFrame.from_dict(self.weights, orient='index').transpose().loc[0]
         self.currency = Currency(self.denomination + config.settings.base_currency)
+
+        # Auto-enable MT5 if configured globally
+        if 'mt5' not in self.contract_data and 'mt5' in config.settings.data_sources:
+            self.contract_data = list(self.contract_data) + ['mt5']
 
     def calculate(self):
         """

@@ -10,6 +10,7 @@ base_currency = 'GBP'
 data_sources = [
     'ib',       # Interactive Brokers (interactivebrokers.com)
     'quandl',   # quandl.com
+    'mt5',      # MetaTrader 5
 ]
 
 # Backend to be used as a storage for downloaded quotes. Possible values: 'hdf5'
@@ -35,3 +36,11 @@ file_logger = {
     'level': logging.DEBUG,
     'file_name': os.path.join("logs/", "pytrendfollow.log")
 }
+
+# MetaTrader 5 connection details
+# Leave blank if not using MT5; these are consumed by the mt5_provider
+mt5_login = None          # e.g. 12345678
+mt5_password = None       # account password
+mt5_server = None         # e.g. 'MetaQuotes-Demo'
+mt5_path = None           # optional absolute path to terminal64.exe/terminal.app (for initialize)
+mt5_timeout = 30          # seconds to wait for initialize/auth

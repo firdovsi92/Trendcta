@@ -23,10 +23,16 @@ class Currency(object):
         self.code = code
         self.ib_symbol = None
         self.quandl_symbol = None
-        self.currency_data = ['ib', 'quandl']
+        self.mt5_symbol = None
+        self.mt5_storage = 'MT5FX'
+        self.mt5_timeframe = 'D1'
+        self.currency_data = ['ib', 'quandl', 'mt5']
         kwargs = config.currencies.currencies_all[code]
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+        if 'mt5' not in self.currency_data and 'mt5' in config.settings.data_sources:
+            self.currency_data = list(self.currency_data) + ['mt5']
 
     def rate(self, nofx=False):
         """
