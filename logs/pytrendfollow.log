@@ -119,3 +119,5 @@
 2025-11-23 11:00:50,268 - instrument - WARNING - Validation for instrument oats failed: couldn't obtain the latest price date
 2025-11-23 11:00:50,360 - instrument - WARNING - Validation for instrument gas failed: couldn't obtain the latest price date
 2025-11-23 11:00:50,369 - instrument - WARNING - Validation for instrument cattle failed: couldn't obtain the latest price date
+2025-11-23 15:23:56,277 - mt5_provider - WARNING - No MT5 data returned for symbol None: (-2, 'Invalid arguments')
+2025-11-23 15:37:06,180 - data_feed - WARNING - Something went wrong on symbol MT5FX_None request from storage: can only concatenate str (not "NoneType") to str
