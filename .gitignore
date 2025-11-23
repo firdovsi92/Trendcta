@@ -7,3 +7,8 @@ cache/*
 config/settings.py
 config/strategy.py
 ignore/*
+.venv/
+venv/
+env/
+__pycache__/
+

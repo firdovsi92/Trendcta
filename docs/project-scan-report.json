@@ -1,0 +1,160 @@
+{
+  "workflow_version": "1.2.0",
+  "timestamps": {
+    "started": "2025-11-22T19:27:38Z",
+    "last_updated": "2025-11-22T19:28:25Z"
+  },
+  "mode": "initial_scan",
+  "scan_level": "quick",
+  "project_root": "/home/firdovsi/projects/myapp/pytrade/PyTrendFollow",
+  "output_folder": "/home/firdovsi/projects/myapp/pytrade/PyTrendFollow/docs",
+  "completed_steps": [
+    {
+      "step": "step_1",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:27:38Z",
+      "summary": "Classified as monolith with 1 part"
+    },
+    {
+      "step": "step_2",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Found 7 existing docs"
+    },
+    {
+      "step": "step_3",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Tech stack: Python backend"
+    },
+    {
+      "step": "step_4",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Quick scan placeholders created"
+    },
+    {
+      "step": "step_5",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Source tree documented"
+    },
+    {
+      "step": "step_6",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Dev workflow summarized; no CI/CD found"
+    },
+    {
+      "step": "step_7",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Integration not applicable (monolith)"
+    },
+    {
+      "step": "step_8",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Architecture doc generated (high-level)"
+    },
+    {
+      "step": "step_9",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Supporting docs written (overview, dev guide, tree)"
+    },
+    {
+      "step": "step_10",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Index generated with TODO markers for missing docs"
+    },
+    {
+      "step": "step_11",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Skipped manual validation in YOLO quick scan; markers remain for missing docs"
+    },
+    {
+      "step": "step_12",
+      "status": "completed",
+      "timestamp": "2025-11-22T19:28:25Z",
+      "summary": "Workflow complete (quick scan)"
+    }
+  ],
+  "current_step": "completed",
+  "findings": {
+    "project_classification": "monolith, 1 part, backend",
+    "existing_docs_count": 7,
+    "technology_stack_summary": "Python backend tooling",
+    "conditional_scan": "Quick scan; no source files read",
+    "dev_workflow": "README-derived commands; no CI/CD files detected",
+    "integration": "Single-part monolith; no cross-part integration"
+  },
+  "outputs_generated": [
+    "architecture.md",
+    "development-guide.md",
+    "index.md",
+    "project-overview.md",
+    "project-scan-report.json",
+    "source-tree-analysis.md"
+  ],
+  "resume_instructions": "Starting from step 1",
+  "repository_type": "monolith",
+  "project_parts": [
+    {
+      "part_id": "app",
+      "root_path": "/home/firdovsi/projects/myapp/pytrade/PyTrendFollow",
+      "project_type_id": "backend",
+      "display_name": "Backend"
+    }
+  ],
+  "project_types": [
+    {
+      "part_id": "app",
+      "project_type_id": "backend",
+      "display_name": "Backend"
+    }
+  ],
+  "existing_docs": [
+    {
+      "path": "README.md",
+      "type": "readme"
+    },
+    {
+      "path": "docs/How our system works.ipynb",
+      "type": "notebook"
+    },
+    {
+      "path": "docs/How to test new rules.ipynb",
+      "type": "notebook"
+    },
+    {
+      "path": "docs/Rolling & Carry.ipynb",
+      "type": "notebook"
+    },
+    {
+      "path": "docs/Working with Prices.ipynb",
+      "type": "notebook"
+    },
+    {
+      "path": "docs/Getting started with Interactive Brokers.ipynb",
+      "type": "notebook"
+    },
+    {
+      "path": "docs/Introduction to Trend Following.ipynb",
+      "type": "notebook"
+    }
+  ],
+  "user_context": "none",
+  "technology_stack": {
+    "app": {
+      "language": "Python",
+      "framework": "Scripts + trading pipeline",
+      "dependencies_source": "requirements.txt"
+    }
+  },
+  "architecture_patterns": {
+    "app": "Backend/service-style tooling"
+  }
+}
